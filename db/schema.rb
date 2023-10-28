@@ -10,8 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_28_211258) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "games", force: :cascade do |t|
+    t.string "category"
+    t.string "name"
+    t.integer "price"
+    t.integer "age_range"
+    t.integer "rating"
+    t.string "manufacturer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
