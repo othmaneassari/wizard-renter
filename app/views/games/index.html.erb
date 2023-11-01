@@ -1,0 +1,7 @@
+<h1> Wizard Renter </h1>
+<h2> Here are the board games available: </h2>
+<ul>
+  <% @games.each do |game| %>
+    <li><%= game.name %></li>
+  <% end %>
+</ul>
