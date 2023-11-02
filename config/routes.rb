@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :games
   resources :bookings
+  resources :my_bookings
 end
