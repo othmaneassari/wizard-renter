@@ -9,7 +9,8 @@ class GamesController < ApplicationController
   end
 
   def new
-    @game = Game.new
+    @user = User.find(1)
+    @game = Game.new(user: @user)
   end
 
   def create
