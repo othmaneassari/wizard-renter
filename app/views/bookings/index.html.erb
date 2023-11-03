@@ -1,0 +1,8 @@
+<h1> Wizard Renter </h1>
+<h2> Your bookings: </h2>
+
+<ul>
+  <% @bookings.each do |booking| %>
+    <li><%= booking.name %></li>
+  <% end %>
+</ul>
