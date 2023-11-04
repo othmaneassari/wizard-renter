@@ -8,3 +8,40 @@ $orange: #E67E22;
 $green: #1EDD88;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
+
+// _colors.scss
+
+// Colour Palette 1er (primary, mains)
+$forest:      #339933;
+  $forest-clear:               rgba(51, 153, 51, .7);
+  $forest-light:               rgba(181, 225, 181, 1); // #b5e1b5, browser-unsafe
+    $forest-light-transparent: rgba(181, 225, 181, .7);
+$kelly:       #33CC00;
+  $kelly-clear:                rgba(51, 204, 0, .7);
+$guardsman:   #CC0000;
+  $guardsman-clear:            rgba(204, 0, 0, .7);
+$sky:         #3399CC;
+$sunglow:     #FFCC33;
+
+// Colour Palette 2e (secondary, contrasts)
+$aqua:        #00FFFF;
+$black:       #000000;
+$fuchsia:     #FF00FF;
+$grey:        #efefef;
+  $grey-shadow: rgba(0, 0, 0, .2);
+$indigo:      #660099;
+$lime:        #00FF00;
+$orange:      #FF9900;
+$red:         #FF0000;
+$white:       #FFFFFF;
+  $white-dim:   rgba(255,255,255,0.9);
+
+// Colour Palette 3e (tertiary, aliases)
+$cyan:        #00FFFF;
+$gray:        #CCCCCC;
+  $gray-shadow: rgba(0, 0, 0, .2);
+$magenta:     #FF00FF;
+
+// Box Shadows
+$primary-box-shadow:   0px 2px 4px #b5e1b54b;
+$secondary-box-shadow: 0px 2px 4px #b5e1b54b;
