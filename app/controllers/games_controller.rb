@@ -1,22 +1,23 @@
 class GamesController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: :index
   def index
     @games = Game.all
   end
 
   def show
-    @games = Game.find(params[:id])
+    @game = Game.find(params[:id])
   end
 
   def new
-    @user = User.find(1)
-    @game = Game.new(user: @user)
+    @game = Game.new
   end
 
   def create
     @game = Game.new(game_params)
+    @game.user = current_user
     @game.save
-    redirect_to game_path(@game.id)
+    redirect_to game_path(@game)
   end
 end
 
