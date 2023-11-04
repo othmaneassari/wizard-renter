@@ -1,14 +1,29 @@
 <h1> Wizard Renter </h1>
 <h2> Here are the board games available: </h2>
+<h2>
+  <%= link_to "Rent a game !", new_path, class:"btn btn-primary"%>
+  </h2>
+<div class="container">
 <ul>
+<div class="cards mt-3">
   <% @games.each do |game| %>
-    <li><%= game.name %></li>
-    <p>
-    <%= link_to "Show this game", game%>
-    </p>
+    <%= link_to game_path(game) do %>
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2> <%=game.name%></h2>
+              <p><%=game.category%></p>
+          </div>
+          <h2 class="card-trip-pricing"><%=game.price%>$</h2>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 
   <h2>
-  <%= link_to "Rent a game !", new_path%>
+  <%= link_to "Go back to home page", root_path, class:"btn btn-primary"%>
   </h2>
+</div>
 </ul>
+</div>
