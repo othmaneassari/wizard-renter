@@ -1,0 +1,7 @@
+<%= simple_form_for [@game, @booking] do |f| %>
+<%= @game.name %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>
+<%= link_to "Go back to games list", games_path, class:"btn btn-primary" %>

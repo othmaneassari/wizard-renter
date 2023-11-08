@@ -6,17 +6,14 @@
 <div class="container">
 <ul>
 <div class="cards mt-3">
-  <% @booking.each do |b| %>
+  <% @bookings.each do |b| %>
     <%= link_to booking_path(booking) do %>
       <div class="card-trip">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
         <div class="card-trip-infos">
           <div>
-            <h2> <%=booking.name%></h2>
-              <p><%=booking.category%></p>
           </div>
-          <h2 class="card-trip-pricing"><%=booking.category%>$</h2>
-        </div>
+
       </div>
     <% end %>
   <% end %>

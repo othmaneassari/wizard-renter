@@ -1,2 +1,0 @@
-class MyBooking < ApplicationRecord
-end
