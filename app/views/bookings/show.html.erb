@@ -1,6 +1,6 @@
-<h1> Bookings information </h1>
-
-<h2><%= @booking.name %></h2>
+<h2><%= @booking %></h2>
 <p><%= @booking.start_date %></p>
 <p><%= @booking.end_date %></p>
-<p><%= @booking.status %></p>
+
+
+<%= link_to "Go back to games list", games_path, class:"btn btn-primary" %>
