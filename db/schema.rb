@@ -35,12 +35,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_02_225917) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "my_bookings", force: :cascade do |t|
-    t.text "name"
-    t.text "start_date"
-    t.text "end_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+
 
 end
