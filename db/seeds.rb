@@ -16,18 +16,17 @@ User.destroy_all
     password: Faker::Internet.password
   )
   user.save!
-
-  10.times do
-    game = Game.new(
-      name:    Faker::Game.title,
-      category: Faker::Game.genre,
-      price: rand(20..70),
-      age_range: rand(7..77),
-      rating:  rand(0..5),
-      manufacturer: Faker::Company.name,
-      user: user
-    )
-    game.save!
-  end
 end
+game = Game.new(
+  name: "Mincecraft",
+  category: "crafting",
+  price: 35,
+  age_range: 77,
+  rating: 5,
+  manufacturer: "Mojang Studio",
+  image_url: "https://image.api.playstation.com/vulcan/img/cfn/11307x4B5WLoVoIUtdewG4uJ_YuDRTwBxQy0qP8ylgazLLc01PBxbsFG1pGOWmqhZsxnNkrU3GXbdXIowBAstzlrhtQ4LCI4.png",
+  user: User.first
+  #User.last 10 more
+)
+game.save!
 puts 'Finished!'

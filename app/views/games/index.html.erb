@@ -9,7 +9,7 @@
   <% @games.each do |game| %>
     <%= link_to game_path(game) do %>
       <div class="card-trip">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <%= image_tag game.image_url%>
         <div class="card-trip-infos">
           <div>
             <h2> <%=game.name%></h2>
