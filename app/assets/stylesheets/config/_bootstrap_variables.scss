@@ -11,7 +11,7 @@ $body-bg:                $light-gray;
 $font-size-base:         1rem;
 
 // Colors
-$body-color: $gray;
+$body-color: black;
 $primary:    $blue;
 $success:    $green;
 $info:       $yellow;
@@ -24,3 +24,9 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+
+// _bootstrap_variables.scss
+
+// Bootstrap Variable Overrides
+// 1. All Bootstrap Variables => https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
+// 2. Sass Default Value Variables => https://robots.thoughtbot.com/sass-default
