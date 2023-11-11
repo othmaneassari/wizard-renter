@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    @total = (@booking.end_date - @booking.start_date) * @booking.game.price
   end
 
   def new
@@ -19,7 +20,6 @@ class BookingsController < ApplicationController
     @booking.save
     redirect_to booking_path(@booking)
   end
-
 
 
 
