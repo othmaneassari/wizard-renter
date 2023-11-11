@@ -27,7 +27,7 @@ body {
 }
 
 .rentform {
-  background-color: white;
+  background-color: rgb(190, 190, 190);
   border-radius: 7px;
   padding: 30px;
   width: 30%;
@@ -40,4 +40,10 @@ body {
 
 .rentform text {
   margin-bottom: 5px;
+}
+
+.img-work {
+  max-width: 250px;
+  margin: 20px auto;
+  border-radius: 7px;
 }
