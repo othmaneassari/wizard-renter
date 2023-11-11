@@ -2,29 +2,28 @@
 <h2> Here are our bookings! </h2>
 <h2>
   <%= link_to "Rent a game !", new_path, class:"btn btn-primary"%>
-  </h2>
+</h2>
 <div class="container">
-<ul>
-<div class="cards mt-3">
-  <% @bookings.each do |b| %>
+  <div class="cards my-3">
+    <% @bookings.each do |b| %>
 
-    <%= link_to booking_path(booking) do %>
-      <div class="card-trip">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-        <div class="card-trip-infos">
-          <div>
-          <%= b.game.name %>
-          <%= b.start_date %>
-          <%= b.end_date %>
+      <%= link_to booking_path(b) do %>
+        <div class="card-trip">
+          <%= image_tag b.game.image_url%>
+          <div class="card-trip-infos">
+            <div>
+              <%= b.game.name %>
+              <%= b.start_date %>
+              <%= b.end_date %>
+            </div>
+
           </div>
-
-      </div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <h2>
-  <%= link_to "Go to Home", root_path, class:"btn btn-primary"%>
-  </h2>
-</div>
-</ul>
+    <h2>
+    <%= link_to "Go to Home", root_path, class:"btn btn-primary"%>
+    </h2>
+  </div>
 </div>
