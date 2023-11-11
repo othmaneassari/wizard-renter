@@ -38,7 +38,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_08_003011) do
     t.index ["user_id"], name: "index_games_on_user_id"
   end
 
-
+  create_table "my_bookings", force: :cascade do |t|
+    t.text "name"
+    t.text "start_date"
+    t.text "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

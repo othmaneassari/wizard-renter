@@ -1,10 +1,10 @@
 <h1> Wizard Renter </h1>
 <h2> Here are the board games available: </h2>
 <h2>
-  <%= link_to "Rent a game !", new_path, class:"btn btn-primary"%>
+  <%= link_to "List a game !", new_path, class:"btn btn-primary"%>
   </h2>
 <div class="container">
-<ul>
+
 <div class="cards mt-3">
   <% @games.each do |game| %>
     <%= link_to game_path(game) do %>
@@ -20,10 +20,8 @@
       </div>
     <% end %>
   <% end %>
-
-  <h2>
+</div>
+<h2>
   <%= link_to "Go back to home page", root_path, class:"btn btn-primary"%>
   </h2>
-</div>
-</ul>
 </div>

@@ -1,6 +1,7 @@
-<h2><%= @booking %></h2>
-<p><%= @booking.start_date %></p>
-<p><%= @booking.end_date %></p>
+<h1><%= @booking.game.name %></h1>
+<h2> Your selection has been saved ! </h2>
+<h2> The duration of your booking will be from <%= @booking.start_date %> until <%= @booking.end_date %> </h2>
+<%= image_tag @booking.game.image_url%>
 
 
 <%= link_to "Go back to games list", games_path, class:"btn btn-primary" %>
