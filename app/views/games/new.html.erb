@@ -1,16 +1,18 @@
-<%= simple_form_for [@game] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :category %>
-  <%= f.text_field :category %>
-  <%= f.label :price %>
-  <%= f.number_field :price %>
-  <%= f.label :age_range %>
-  <%= f.number_field :age_range %>
-  <%= f.label :rating %>
-  <%= f.number_field :rating %>
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
-  <%= f.submit %>
-<% end %>
+<div class= "rentform">
+  <%= simple_form_for [@game] do |f| %>
+    <h3><%= f.label :name %> </h3>
+    <%= f.text_field :name %>
+    <h3><%= f.label :category %>  </h3>
+    <%= f.text_field :category %>
+    <h3><%= f.label :price %>
+   <h3> <%= f.number_field :price %> </h3>
+    <h3><%= f.label :age_range %>  </h3>
+    <%= f.number_field :age_range %>
+    <h3><%= f.label :rating %>  </h3>
+    <%= f.number_field :rating %>
+    <h3> <%= f.label :image_url %> </h3>
+    <%= f.text_field :image_url %>
+    <h3> <%= f.submit class:"btn btn-success" %> </h3>
+  <% end %>
+</div>
 <%= link_to "Go back to games list", games_path, class:"btn btn-primary" %>
