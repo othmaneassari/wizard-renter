@@ -1,10 +1,19 @@
-<h1><%= @booking.game.name %></h1>
-<h2> Your selection has been saved ! </h2>
-<h2> The duration of your booking will be from <%= @booking.start_date %> until <%= @booking.end_date %> </h2>
-<h3> Here is your total: $ <%= @total.to_i %> </h3>
+<div class="container">
+<div class="card-trip mt-3 p-3">
+  <div class="card-body">
+  <h1><%= @booking.game.name %></h1>
+   <div class="card-trip-infos">
+    <h2> Your selection has been saved ! </h2>
+    <h2> The duration of your booking will be from <%= @booking.start_date %> until <%= @booking.end_date %> </h2>
+    <h2> Here is your total: $ <%= @total.to_i %> </h3>
+    </div>
 
-<%= image_tag @booking.game.image_url%>
+    <div class="img-edit d-flex justify-content-center">
+      <%= image_tag @booking.game.image_url, class:"img-work" %>
+    </div>
 
-
-<%= link_to "Go back to games list", games_path, class:"btn btn-primary" %>
-<%= link_to "See all my bookings", bookings_path, class:"btn btn-primary" %>
+  <%= link_to "Go back to games list", games_path, class:"btn btn-primary" %>
+  <%= link_to "See all my bookings", bookings_path, class:"btn btn-primary" %>
+ </div>
+</div>
+</div>
