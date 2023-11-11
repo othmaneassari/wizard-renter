@@ -20,8 +20,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_11_161219) do
     t.text "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "text"
     t.date "start_date"
     t.date "end_date"
   end
